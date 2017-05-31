@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: cachet
+  labels:
+    provider: cachet
+    heritage: helm
+spec:
+  replicas: ${REPLICAS}
+  template:
+    metadata:
+      labels:
+        provider: cachet
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 8080
+      - name: cachet
+        image: cachet:2.3.11
+        ports:
+        - containerPort: 80

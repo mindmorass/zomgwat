@@ -1,0 +1,62 @@
+.catalog:
+  name: Cachet
+  version: 2.3.11
+  description: Open Source Status page
+  questions:
+    - variable: REPLICAS
+      default: 1
+      min: 1
+      max: 1
+      label: Server Replicas
+      description: Initial number of server replicas
+      required: true
+      type: int
+
+    - variable: SERVICE_PORT
+      default: 80
+      label: Service port
+      description: Port to expose the service on
+      required: true
+      type: int
+
+    - variable: APP_KEY
+      default: wat
+      label: Cachet APP KEY
+      required: true
+      type: string
+
+    - variable: MYSQL_HOST
+      default: localhost
+      label: MySQL Host Server
+      required: true
+      type: string
+
+    - variable: MYSQL_USER
+      default: cachet
+      label: MySQL Username
+      required: true
+      type: string
+
+    - variable: MYSQL_PASSWORD
+      default: changethisvalue
+      label: MySQL Password
+      required: true
+      type: string
+
+    - variable: MYSQL_PORT
+      default: 3306
+      label: MySQL Password
+      required: true
+      type: int
+
+    - variable: ROBOT_NAME
+      default: cachet_robot
+      label: Slack Robot Name
+      required: true
+      type: string
+ 
+    - variable: SLACK_WEBHOOK_URL
+      default: https://hooks.slack.com/services/XXXXXXXXX/XXXXXXXXX/XXXXXXXXXXXXXXXXXXXXXXXX
+      label: Slack Webhook URL
+      required: true
+      type: string

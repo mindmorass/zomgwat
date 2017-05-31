@@ -1,0 +1,5 @@
+name: Cachet
+version: 2.3.11
+maintainer: Curtis Downing
+category: Monitoring
+description: Status page for application services
