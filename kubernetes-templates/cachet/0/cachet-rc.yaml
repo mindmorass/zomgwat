@@ -18,6 +18,6 @@ spec:
         ports:
         - containerPort: 8080
       - name: cachet
-        image: cachet:2.3.11
+        image: cachethq/docker:2.3.11
         ports:
         - containerPort: 80
